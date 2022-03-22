@@ -1,0 +1,17 @@
+{
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "-": "0.0.1",
+    "chai": "^4.3.6",
+    "excel": "^1.0.1",
+    "express": "*",
+    "express.js": "^1.0.0",
+    "path": "*"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  }
+}
