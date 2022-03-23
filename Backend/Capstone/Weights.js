@@ -1,10 +1,10 @@
 const Weights = {
-  Professor:10,
-  LabInstructer:9,
-  TA:8,
-  Passed:2,
-  Taught:1,
-  Major:3,
+  Professor:3,
+  LabInstructer:2,
+  TA:1,
+  Taken:8,
+  Taught:10,
+  Major:9,
   
 }
 

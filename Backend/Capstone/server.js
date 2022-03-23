@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const { Choices } = require('./Choices');
 const { Course } = require('./Course');
+const { Spreadsheet } = require('./data');
 const app = express();
 
 
@@ -21,7 +22,7 @@ app.listen(3000, function () {
 //Weights for each input
 const { Weights } = require("./Weights");
 
-var Test_Course = new Course("Machine Learning", 1)
+/* var Test_Course = new Course("Machine Learning", 1)
 
         
 var Choice = new Choices("Evans","Mosomi",1,1,1,1,1,1);
@@ -40,6 +41,8 @@ console.log(Test_Course.PotentialCandidates)
 
 console.log("--------------Best choice for this course is: ");
 console.log(Test_Course.getCandidate())
+ */
+Spreadsheet.ComputeAlgorithmOnFile("./Capstone.xlsx")
 
 
 
