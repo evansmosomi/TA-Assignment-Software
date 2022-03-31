@@ -1,24 +1,46 @@
 import React, { Component } from "react";
 import StudentDetails from "./StudentDetails";
-import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
-import ProfessorDetails from "./ProfessorDetails";
-import ProfessorCourseSelections from "./ProfessorCourseSelections";
+import StudCoursePick1 from "./StudCoursePick1";
+import StudCoursePick6 from "./StudCoursePick6";
+import StudCoursePick2 from "./StudCoursePick2";
+import StudCoursePick3 from "./StudCoursePick3";
+import StudCoursePick4 from "./StudCoursePick4";
+import StudCoursePick5 from "./StudCoursePick5";
 
-export class StudentForm extends Component {
+export default class StudentForm extends Component {
   state = {
     step: 1,
     name: "",
     id: "",
-    courses: "",
-    prerequisites: "",
-    semester: "",
-    experience: "",
     email: "",
-    occupation: "",
-    city: "",
     bio: "",
+
+    course1: "",
+    course2: "",
+    course3: "",
+    course4: "",
+    course5: "",
+    course6: "",
+    experience1: "",
+    experience2: "",
+    experience3: "",
+    experience4: "",
+    experience5: "",
+    experience6: "",
+    prerequisites1: "",
+    prerequisites2: "",
+    prerequisites3: "",
+    prerequisites4: "",
+    prerequisites5: "",
+    prerequisites6: "",
+    pass1: "",
+    pass2: "",
+    pass3: "",
+    pass4: "",
+    pass5: "",
+    pass6: "",
   };
 
   nextStep = () => {
@@ -44,25 +66,61 @@ export class StudentForm extends Component {
     const {
       name,
       id,
-      course,
+      course1,
+      course2,
+      course3,
+      course4,
+      course5,
+      course6,
+      experience1,
+      experience2,
+      experience3,
+      experience4,
+      experience5,
+      experience6,
+      prerequisites1,
+      prerequisites2,
+      prerequisites3,
+      prerequisites4,
+      prerequisites5,
+      prerequisites6,
+      pass1,
+      pass2,
+      pass3,
+      pass4,
+      pass5,
+      pass6,
       email,
-      prerequisites,
-      semester,
-      occupation,
-      experience,
-      city,
       bio,
     } = this.state;
     const values = {
       name,
       id,
-      course,
-      prerequisites,
-      semester,
+      course1,
+      course2,
+      course3,
+      course4,
+      course5,
+      course6,
+      experience1,
+      experience2,
+      experience3,
+      experience4,
+      experience5,
+      experience6,
+      prerequisites1,
+      prerequisites2,
+      prerequisites3,
+      prerequisites4,
+      prerequisites5,
+      prerequisites6,
+      pass1,
+      pass2,
+      pass3,
+      pass4,
+      pass5,
+      pass6,
       email,
-      experience,
-      occupation,
-      city,
       bio,
     };
 
@@ -70,7 +128,6 @@ export class StudentForm extends Component {
       case 1:
         return (
           <StudentDetails
-            // <ProfessorDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
@@ -78,8 +135,7 @@ export class StudentForm extends Component {
         );
       case 2:
         return (
-          // <ProfessorCourseDetails
-          <FormPersonalDetails
+          <StudCoursePick1
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
@@ -88,18 +144,61 @@ export class StudentForm extends Component {
         );
       case 3:
         return (
+          <StudCoursePick2
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 4:
+        return (
+          <StudCoursePick3
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 5:
+        return (
+          <StudCoursePick4
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 6:
+        return (
+          <StudCoursePick5
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 7:
+        return (
+          <StudCoursePick6
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 8:
+        return (
           <Confirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             values={values}
           />
         );
-      case 4:
+      case 9:
         return <Success />;
       default:
         console.log("Capstone TA Assignment");
     }
   }
 }
-
-export default StudentForm;
