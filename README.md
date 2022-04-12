@@ -8,7 +8,7 @@ Step 2
 cd TA-Assignment-Software
 
 ## Backend Engine
-```bash
+
 # Step 3
 
 Open a terminal
