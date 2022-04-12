@@ -1,20 +1,17 @@
 # TA-Assignment-Software
 
 ```bash
-  # Step 1
-git clone repository into local machine
+# Step 1
+git clone repository into your local machine
 
-Step 2
+# Step 2
+Open a terminal
 cd TA-Assignment-Software
 
-## Backend Engine
+## Algorithm
 
 # Step 3
-
-Open a terminal
-cd Backend
-cd Capstone
-
+cd Backend/Capstone
 
 # Step 4
 node server.js
@@ -22,7 +19,8 @@ node server.js
 ## UI Form 
 
 # Step 5
-cd Front end
+Open a new terminal
+cd FrontEnd
 
 # Step 6
 npm install
